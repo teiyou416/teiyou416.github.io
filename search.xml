@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>push失败的一次记录”</title>
+      <link href="/2025/08/27/push%E5%A4%B1%E8%B4%A5%E7%9A%84%E4%B8%80%E6%AC%A1%E8%AE%B0%E5%BD%95%E2%80%9D/"/>
+      <url>/2025/08/27/push%E5%A4%B1%E8%B4%A5%E7%9A%84%E4%B8%80%E6%AC%A1%E8%AE%B0%E5%BD%95%E2%80%9D/</url>
+      
+        <content type="html"><![CDATA[<p>最近在使用git push的时候遇到了一些问题，尤其是在开启VPN的状态下。每次尝试push代码时，都会收到类似以下的错误信息：  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh: connect to host github.com port 22: Connection timed outfatal: Could not read from remote repository.Please make sure you have the correct access rightsand the repository exists.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这个错误信息表明，git无法通过SSH连接到GitHub的服务器，可能是由于VPN的网络配置导致的。<br>解决方法  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global &quot;url.ssh://git@ssh.github.com:443/.insteadOf&quot; git@github.com:</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[url &quot;ssh://git@ssh.github.com:443/&quot;]</span><br><span class="line">insteadOf = git@github.com:</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>将网址删除即可<br>参考了<a href="https://github.com/orgs/community/discussions/54558">github issue 54558</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tech </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CHENG Ye</title>
       <link href="/2025/08/27/hello-world/"/>
       <url>/2025/08/27/hello-world/</url>
@@ -21,7 +46,7 @@
       <link href="/2025/08/26/%E5%8D%97%E4%BA%AC%E5%91%A8%E8%AE%B02025-8-26/"/>
       <url>/2025/08/26/%E5%8D%97%E4%BA%AC%E5%91%A8%E8%AE%B02025-8-26/</url>
       
-        <content type="html"><![CDATA[<p>这是我人生中第一篇周记。本周记的目的是记录我生活中发生的有趣的事情和看过的文章以及一些有用的技术。</p>]]></content>
+        <content type="html"><![CDATA[<p>这是我人生中第一篇周记。本周记的目的是记录我生活中发生的有趣的事情和看过的文章以及一些有用的技术。<br>本周记的时间跨度是从2025年8月19日到2025年8月25日。<br>8月15日下午3点于日本官网看到了自己的考号，合格了京都大学，非常高兴。<br>8月16日上午10点50分左右合格通知书寄达。得知研究室分配结果，分配至第一志愿社15<a href="https://shudo-lab.org/">首藤研究室</a>。<br>当晚于关西国际机场T2航站楼过夜，乘坐第二日上午8点50分的飞机，于中国时间10点30分抵达南京禄口国际机场。<br>8月27日与初中同学见面，一起健身。<br>本周完全没看论文，没进行学习，只是搭建好了个人博客。<br>之后每周会定时更新周记，记录生活和学习。</p>]]></content>
       
       
       <categories>
